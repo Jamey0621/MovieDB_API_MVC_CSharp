@@ -1,0 +1,38 @@
+﻿@model MyMovieApp.Models.Reviews.Root
+
+@{
+    ViewData["Title"] = "Reviews";
+}
+<div class="text-center">
+    <h1 class="display-4 align-self-md-center" style="color: white;">This is what is popular right now!</h1>
+
+</div>
+
+<div class="flex-container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        @foreach (var item in Model.results)
+        {
+            <div class="col-md-4">
+                <div class="h-50">
+                    <div class="card" style="width: 18rem;">
+                     
+
+                        <div class="card-body">
+                            <h5 class="card-title">User:@item.author</h5>
+                            <p class="text-sm-right">Created on @item.created_at</p>
+
+                            <p class="card-text ">@item.content</p>
+
+                         </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        }
+    </div>
+</div>
+

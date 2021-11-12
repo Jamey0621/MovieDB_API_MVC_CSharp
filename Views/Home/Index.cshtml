@@ -1,0 +1,81 @@
+﻿@model MyMovieApp.Models.PopularMovieModel.Root
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body{
+        background: rgb(0, 0, 0, 0.9 );
+        margin: 0;
+        color: white;
+        font-family: 'Segoe UI'
+    }
+    .background{
+        content: '';
+        height: 100vh;
+        width: 100vh;
+        background-image: url(../../wwwroot/img/upcoming.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display:block;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        
+    }
+
+    .content {
+        position: absolute;
+        z-index: 1;
+        top: 10%;
+        left: 10%;
+        margin-top: 200px;
+        color: floralwhite;
+        text-emphasis-style:triangle;
+        text-decoration-thickness: 20px;
+        width: 600px;
+        height: 350px;
+        text-align: center;
+        transition: all 1000ms;
+        align-content:center;
+    }
+    .content.logo{
+        align-content: center;
+        height: 180px;
+        width: 180px;
+
+
+    }
+
+    .content.title {
+        font-size: 2.2rem;
+        margin-top: 1rem;
+
+    }
+
+    .content.text{
+        line-height: 1.7;
+        margin-top: 1rem;
+
+    }
+
+
+
+</style>
+
+<header class="showcase">
+
+    <div class="content">
+        <img src="~/img/b3207eb499da400fac313e2f6764b39b.png" class="logo" />
+        <div class="text">
+            Welcome To Jameys Movie & Tv App Log in and explore!
+        </div>
+
+        <a class="btn mr-2 text-center" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </div>
+    <img src="~/img/upcoming.jpg" class="background" />
+</header>
+
+
+
+
+

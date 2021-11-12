@@ -1,0 +1,45 @@
+﻿@model MyMovieApp.Models.UserMovie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>UserMovie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="backdrop_path" class="control-label"></label>
+                <input asp-for="backdrop_path" class="form-control" />
+                <span asp-validation-for="backdrop_path" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="movie_id" class="control-label"></label>
+                <input asp-for="movie_id" class="form-control" />
+                <span asp-validation-for="movie_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="poster_path" class="control-label"></label>
+                <input asp-for="poster_path" class="form-control" />
+                <span asp-validation-for="poster_path" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
